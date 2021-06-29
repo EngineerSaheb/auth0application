@@ -1,0 +1,92 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+        <form (ngSubmit)="addTaskInOurList('ad')" >
+            <div class="col-md-12">
+                <div class="card card-stats">
+                    <div class="stats" >
+                        <div class="card-header card-header-danger">
+                            <span class="rr-spam">Add Information Here</span>                                           
+                        </div>
+                        <div class="card-footer">
+                        
+                          <div class="row">
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Add Task</mat-label>
+                                      <input matInput placeholder="Placeholder" [formControl]="addTask" required>
+                                      <mat-icon matSuffix>work</mat-icon>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Technology & Tools</mat-label>
+                                      <input matInput placeholder="Placeholder" [formControl]="technologyAndTools" required>
+                                      <mat-icon matSuffix>settings_system_daydream</mat-icon>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Task Purpose</mat-label>
+                                      <input matInput placeholder="Placeholder" [formControl]="taskPurpose" required>
+                                      <mat-icon matSuffix>description</mat-icon>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Working github url</mat-label>
+                                      <input matInput placeholder="Placeholder" [formControl]="workingGithubUrl" required>
+                                      <mat-icon matSuffix>link</mat-icon>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Start Task Date & Time</mat-label>
+                                      <input matInput [matDatepicker]="picker" [formControl]="startDate" required>
+                                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                      <mat-datepicker #picker></mat-datepicker>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>End Task Date & Time</mat-label>
+                                      <input matInput [matDatepicker]="picker2" [formControl]="endDate" required>
+                                      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                      <mat-datepicker #picker2></mat-datepicker>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Working Hours</mat-label>
+                                      <input matInput placeholder="Placeholder" [formControl]="workingHours" required>
+                                      <mat-icon matSuffix>av_timer</mat-icon>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-4">
+                                  <mat-form-field appearance="outline">
+                                      <mat-label>Project Type</mat-label>
+                                        <mat-select>
+                                            <mat-option value="option1">Practice</mat-option>
+                                            <mat-option value="option2">Demo</mat-option>
+                                            <mat-option value="option3">Real</mat-option>
+                                        </mat-select>
+                                        <mat-icon matSuffix>work_outline</mat-icon>
+                                  </mat-form-field>
+                              </div>
+                          </div>
+                      
+                        </div>
+                        
+                    </div>
+                </div>
+    
+              <mat-dialog-actions align="center">
+                  <button mat-raised-button mat-dialog-close class="Task-button">Cancel</button>
+                  <button mat-raised-button type="submit" cdkFocusInitial class="Task-button">Submit</button>
+              </mat-dialog-actions>
+              <br>
+            </div>
+        </form>
+      </div>
+  </div>
+</div>

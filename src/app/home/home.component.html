@@ -1,0 +1,31 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="warn" class="example-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="example-app-name">Welcome To Our Working Management System</h1>
+  <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <span class="material-icons" (click)="signOut()">logout</span>
+      </button>
+  </mat-toolbar>
+
+   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav opened="true" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"[fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+        <mat-nav-list>
+            <ul class="nav navbar-nav" routerLinkActive="active">
+                <mat-button-toggle  *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item toggle-button">
+                    <a class="nav-link" [routerLink]="[menuItem.path]">
+                        <i class="material-icons">{{menuItem.icon}}</i>{{menuItem.title}}
+                    </a>
+                </mat-button-toggle>
+              </ul>
+              <!-- <mat-divider></mat-divider> -->
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
+
+</div>
+

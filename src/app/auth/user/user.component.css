@@ -1,0 +1,25 @@
+
+.rr-spam{
+   font-weight: bold;
+   margin-left: 110px; 
+}
+.register-button {
+    font-weight: bold;
+    background-color: rgba(244, 67, 54, 0.4);
+    width: 300px;
+    text-align: center;
+}
+.social-button{
+    font-weight: bold;
+    background-color: #F5FFFA;
+    width: 300px;
+    text-align: center;
+}
+.registration-link {
+    font-weight: bold;
+    cursor: pointer;
+}
+.login-link {
+    font-weight: bold;
+    cursor: pointer;
+}
